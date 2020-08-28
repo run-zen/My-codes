@@ -1,0 +1,7 @@
+#igonre the files of type *.exe
+
+*.exe
+
+#ignoring these particular files.
+
+hello.cpp
