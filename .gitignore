@@ -1,7 +1,7 @@
-#igonre the files of type *.exe
+#igonre the files of type *.exe, .vscode/
 
 *.exe
-
+*.vscode
 #ignoring these particular files.
 
 hello.cpp
