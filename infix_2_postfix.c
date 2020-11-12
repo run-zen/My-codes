@@ -28,7 +28,7 @@ char pop(struct snode** top_ref) {
      }
 
 }
-int peek(struct snode** top_ref) {
+char peek(struct snode** top_ref) {
      if(*top_ref == NULL) {
           printf("\nstack overflow\n");
           getchar();
