@@ -44,35 +44,27 @@ int isEmpty(struct snode* root) {
      return !root;
 }
 
-char * reverseList(char exp[],char* p) {
+void reverseList(char exp[]) {
      char ch;
      struct snode* root=NULL;
      for(int i=0;exp[i] != '\0'; i++) {
           push(&root,exp[i]);
      }
-     int i=0;
+     int i=-1;
      while(!isEmpty(root)) {
           ch = pop(&root);
-          p[i] = ch;
-          i++;
+          exp[++i] = ch;
      }
-     p[i] = '\0';
-     return p;
+     exp[++i] = '\0';
 }
 
 int main() {
-     char exp[100];
+     static char exp[100];
      printf("\nEnter the string to reverse : ");
      gets(exp);
-     int len = 0;
-     for(int i=0;exp[i] != '\0';i++) {
-          len++;
-     }
-     char ch[100];
-     char* p;
-     p = reverseList(exp,ch);
-     for(int i=0;i<len;i++) {
-          printf("%c", *(p+i));
+     reverseList(exp);
+     for(int i=0;exp[i] != '\0'; i++) {
+          printf("%c", exp[i]);
      }
 
      return 0;
